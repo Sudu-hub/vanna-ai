@@ -1,0 +1,1 @@
+# Vanna 2.0 Agent initialization
