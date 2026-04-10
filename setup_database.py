@@ -218,12 +218,14 @@ def insert_data(conn):
 # Main
 # -----------------------------
 def main():
-    conn = sqlite3.connect(DB_NAME)
+    conn = sqlite3.connect(DB_NAME, timeout=10)
 
-    create_tables(conn)
-    summary = insert_data(conn)
+    try:
+        create_tables(conn)
+        summary = insert_data(conn)
 
-    conn.close()
+    finally:
+        conn.close()
 
     print(
         f"Created {summary['patients']} patients, "

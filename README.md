@@ -80,6 +80,8 @@ GROQ_API_KEY=your_api_key_here
 
 
 ---
+# SQLite lock happen 
+SQLite allows only one writer connection at a time
 
 ## Database Setup
 
